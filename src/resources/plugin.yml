@@ -1,0 +1,25 @@
+main: network.starplum.Meteor
+name: Meteor
+version: 1
+description: §8§l* §fThe Meteor plugin.
+authors: [iDevMC, imDeprecated]
+website: https://github.com/Starplum/Meteor
+api-version: 1.16
+prefix: (Meteor)
+load: POSTWORLD
+
+commands:
+   gamemode:
+      description: 'Change your gamemode'
+      usage: /<command> <gamemode>
+      aliases: [gm, gmode, gamem]
+      
+permissions:
+   meteor.*:
+      description: 'Access to all Meteor commands'
+      default: false
+      children:
+         meteor.gamemode: true
+   meteor.gamemode:
+      description: 'Access to all Gamemode commands'
+      default: false
