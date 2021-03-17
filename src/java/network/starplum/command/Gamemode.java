@@ -25,7 +25,7 @@ public class Gamemode implements CommandExecutor {
 		final GameMode SPECTATOR = GameMode.SPECTATOR;
 		
 		
-		if(isPlayer) {
+		if(!isPlayer) {
 			return false;
 		} else {
 			if(hasPermission) {
@@ -33,22 +33,22 @@ public class Gamemode implements CommandExecutor {
 					if(args[0].equalsIgnoreCase("creative") || args[0].equalsIgnoreCase("c") || args[0].equalsIgnoreCase("1")) {
 						if(player.getGameMode() != GameMode.CREATIVE) {
 							player.setGameMode(CREATIVE);
-						} else player.sendMessage("§8§l* §fYou're already in §7Creative");
+						} else player.sendMessage("Â§8Â§l* Â§fYou're already in Â§7Creative");
 					} else if(args[0].equalsIgnoreCase("survival") || args[0].equalsIgnoreCase("s") || args[0].equalsIgnoreCase("0")) {
 						if(player.getGameMode() != GameMode.SURVIVAL) {
 							player.setGameMode(SURVIVAL);
-						} else player.sendMessage("§8§l* §fYou're already in §7Survival");
+						} else player.sendMessage("Â§8Â§l* Â§fYou're already in Â§7Survival");
 					} else if(args[0].equalsIgnoreCase("adventure") || args[0].equalsIgnoreCase("a") || args[0].equalsIgnoreCase("2")) {
 						if(player.getGameMode() != GameMode.ADVENTURE) {
 							player.setGameMode(ADVENTURE);
-						} else player.sendMessage("§8§l* §fYou're already in §7Adventure");
+						} else player.sendMessage("Â§8Â§l* Â§fYou're already in Â§7Adventure");
 					} if(args[0].equalsIgnoreCase("spectator") || args[0].equalsIgnoreCase("sp") || args[0].equalsIgnoreCase("3")) {
 						if(player.getGameMode() != GameMode.SPECTATOR) {
 							player.setGameMode(SPECTATOR);
-						} else player.sendMessage("§8§l* §fYou're already in §7Spectator");
-					} else player.sendMessage("§8§l* §fInvalid Gamemode.");
-				} else player.sendMessage("§8§l* §7/gamemode <gamemode>");		
-			} else player.sendMessage("§8§l* §fYou do not have permission to use this command !");
+						} else player.sendMessage("Â§8Â§l* Â§fYou're already in Â§7Spectator");
+					} else player.sendMessage("Â§8Â§l* Â§fInvalid Gamemode.");
+				} else player.sendMessage("Â§8Â§l* Â§7/gamemode <gamemode>");		
+			} else player.sendMessage("Â§8Â§l* Â§fYou do not have permission to use this command !");
 		} return true;
 	}
 
